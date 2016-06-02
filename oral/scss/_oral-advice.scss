@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.advice-content{
+  width: $min-width;
+  margin: auto;
+  padding: 45px 0 25px 0;
+  .advice-each{
+    width: 490px;
+    height: 290px;
+    background-color: #D6D6D6;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px 30px 200px;
+
+    overflow: hidden;
+    &:nth-child(2n){
+      margin-right: 0;
+    }
+    .advice-each-img{
+      width: 190px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #A4A4A4;
+    }
+    p{
+      max-height: 160px;
+      overflow: hidden;
+    }
+    .advice-each-time{
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+      font-size: 12px;
+    }
+  }
+}

@@ -131,6 +131,12 @@ div{
         color: #e1e1e1;
         font-weight: bolder;
         cursor: pointer;
+        a{
+          color: #e1e1e1;
+          &:hover{
+            color: lighten(#e1e1e1, 5%);
+          }
+        }
       }
     }
     img{

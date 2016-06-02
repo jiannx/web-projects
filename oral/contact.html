@@ -3,6 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>联系我们</title>
+
+    <link rel="stylesheet" href="lib/bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -27,17 +31,43 @@
     </div>
     <div class="nav-menu">
         <ul class="nav-menu-row">
-            <li class="nav-menu-item">首页</li>
-            <li class="nav-menu-item">口腔咨询</li>
-            <li class="nav-menu-item">行业交流</li>
-            <li class="nav-menu-item">产品介绍</li>
-            <li class="nav-menu-item">口腔前沿</li>
-            <li class="nav-menu-item">关于我们</li>
-            <li class="nav-menu-item">联系我们</li>
+            <li class="nav-menu-item"><a href="index.html">首页</a></li>
+            <li class="nav-menu-item"><a href="oral-advice.html">口腔咨询</a></li>
+            <li class="nav-menu-item"><a href="business-exchange.html">行业交流</a></li>
+            <li class="nav-menu-item"><a href="product-description.html">产品介绍</a></li>
+            <li class="nav-menu-item"><a href="oral-leading.html">口腔前沿</a></li>
+            <li class="nav-menu-item"><a href="about.html">关于我们</a></li>
+            <li class="nav-menu-item"><a href="contact.html">联系我们</a></li>
             <li class="clear-fix"></li>
         </ul>
         <!--<img src="http://images.ifanr.cn/wp-content/uploads/2016/05/vive3-1.jpg" alt=""/>-->
     </div>
+</div>
+
+<div class="contact">
+    <div class="contact-content">
+        <div class="contact-content-name">留言板</div>
+        <form>
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="email" class="form-control" id="name" placeholder="姓名">
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="password" class="form-control" id="email" placeholder="邮箱">
+            </div>
+            <div class="form-group">
+                <label for="content">留言</label>
+                <textarea class="form-control" rows="3" id="content"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">提交</button>
+        </form>
+        <div class="contact-content-map"></div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="test-t">底部</div>
 </div>
 
 </body>

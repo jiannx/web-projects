@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.contact{
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.contact-content{
+  width: $min-width;
+  margin: auto;
+  padding: 50px 550px 100px 0;
+  .contact-content-name{
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+  .contact-content-map{
+    width: 500px;
+    height: 320px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background-color: #626262;
+  }
+}
