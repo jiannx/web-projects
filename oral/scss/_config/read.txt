@@ -1,0 +1,29 @@
+scss项目配置
+
+该目录下为scss的配置
+bat文件为手动编译scss，需先配置config.rb
+
+
+标准的CSS注释 /* comment */ ，会保留到编译后的文件。
+单行注释 // comment，只保留在SASS源文件中，编译后被省略。
+在/*后面加一个感叹号，表示这是"重要注释"。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。
+
+
+SASS提供了一些内置的颜色函数，以便生成系列颜色。
+　　lighten(#cc3, 10%) // #d6d65c
+　　darken(#cc3, 10%) // #a3a329
+　　grayscale(#cc3) // #808080
+　　complement(#cc3) // #33c
+
+
+SASS提供四个编译风格的选项：
+　　* nested：嵌套缩进的css代码，它是默认值。
+　　* expanded：没有缩进的、扩展的css代码。
+　　* compact：简洁格式的css代码。
+　　* compressed：压缩后的css代码。
+sass --style compressed test.sass test.css
+压缩后的css代码
+--no-cache --update --style compressed $FileName$:$ProjectFileDir$\css\$FileNameWithoutExtension$.css
+嵌套缩进的css代码
+--no-cache --update $FileName$:$ProjectFileDir$\css\$FileNameWithoutExtension$.css
+
