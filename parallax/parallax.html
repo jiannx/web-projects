@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>特效三</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script src="jquery.easing.1.3.js"></script>
+    <script src="img-parallax.js"></script>
+
+    <style>
+        .img-box{
+            width: 200px;
+            height: 300px;
+            border: 1px solid sandybrown;
+            margin: 100px 0;
+
+            /*以下父div必备样式  position可以relative或者absolute*/
+            position: relative;
+            overflow: hidden;
+        }
+        .img-box img{
+            display: none;
+        }
+        .body-parallax{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: slategray;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--该div使用position:fix来模拟惯性滚动 存在一定的局限性，请注意使用：大部分情况下，请将所以dom都放在.body-parallax内部-->
+<div class="body-parallax" id="box">
+    <div style="width: 1000px; margin: auto;">
+        <div class="img-box" id="test1">
+            <div style="position: absolute"></div>
+            <img src="pic1.png" alt=""/>
+        </div>
+        <div class="img-box" id="test2" style="width: 400px; height: 400px">
+            <img src="pic1.png" alt=""/>
+        </div>
+        <div class="img-box" id="test3">
+            <img src="pic1.png" alt=""/>
+        </div>
+        <div class="img-box" id="test4">
+            <img src="pic1.png" alt=""/>
+        </div>
+        <div class="img-box" id="test5" style="width: 500px; height: 700px">
+            <img src="pic1.png" alt=""/>
+        </div>
+    </div>
+</div>
+
+<script>
+    //请使用 window.onload进行调用
+    window.onload = function () {
+        //暂不支持class选择器形式
+        // $('.img-box').imgParallax(); error
+        $('#test1').imgParallax();
+        $('#test2').imgParallax();
+        $('#test3').imgParallax();
+        $('#test4').imgParallax();
+        $('#test5').imgParallax();
+
+        //添加全局的惯性滚动
+        //options = {
+        //  animateTime : 3000,     //滚动执行的时间
+        //  fixTop : 0              //相对于顶部的偏移量
+        //}
+        $('#box').bodyParallax();
+    };
+</script>
+</body>
+</html>
