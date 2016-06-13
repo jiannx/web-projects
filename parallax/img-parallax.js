@@ -17,7 +17,10 @@
         //当autoImgSize为false时建议手动设置该值
         parallaxNumY : 'auto',
         //横向滚动差值 自定义可设置任意正整数数值，但是该值不要大于(图片宽度-父div宽度)/2
-        parallaxNumX : 20
+        parallaxNumX : 20,
+        //动画类型
+        animate : 'easeOutCubic', //easeOutBack
+        animateTime : 2000
     };
     var MAX_H_PARALLAX_INDEX = 0.2;     //视差值默认系数
 
@@ -29,7 +32,7 @@
             height : $(this).height()
         };
 
-        var ANIMATE_TIME = 3000;  //设置动画时间
+        var ANIMATE_TIME = opts.animate;  //设置动画时间
 
         //获取高视差值
         var MAX_H_PARALLAX;
@@ -102,10 +105,18 @@
             }
             translateY = ((st - (minOffsetH + maxOffsetH) / 2 )) / Math.abs((maxOffsetH - minOffsetH) / 2) * MAX_H_PARALLAX;
 
-            $img.stop(true, false).animate({
+            $img.stop(true, false);
+            console.info($img.css('margin-top'), (- imgSize.height / 2) + translateY);
+            $img.animate({
                 'margin-top' : (- imgSize.height / 2) + translateY,
                 'margin-left' : (- imgSize.width / 2) - translateX
-            }, ANIMATE_TIME, 'easeOutExpo');
+            }, opts.animateTime, opts.animate);
+
+            // TweenLite.to($img, 1.5, {
+            //     'margin-top' : (- imgSize.height / 2) + translateY,
+            //     'margin-left' : (- imgSize.width / 2) - translateX,
+            //     ease: Elastic.easeInOut.config(1, 1), y: 0
+            // });
         }
         adjust();
 
@@ -124,7 +135,7 @@
     };
     //body添加惯性滚动 默认参数
     var bodyParallaxOpts = {
-        animateTime : 3000,     //滚动执行的时间
+        animateTime : 2000,     //滚动执行的时间
         fixTop : 0              //相对于顶部的偏移量
     };
     //body添加惯性滚动 请在window.onload中调用
