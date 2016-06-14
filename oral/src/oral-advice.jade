@@ -1,0 +1,21 @@
+extends _layouts/base
+
+block title
+  title 口腔咨询
+
+block content
+  include _modules/head-small
+
+  .advice-content
+    - for(var i = 0; i< 4; i++){
+      .advice-each
+        .advice-each-img
+        h3 大标题
+        h4 小标题
+        p 的视觉解决方案，对于物体的精确识别、色彩等等，可以更直接地捕捉。其实视觉解决方案对近处的距离识别也颇为精准
+        .advice-each-time 2016-06-02
+    - }
+    .clear-fix
+    
+
+  include _modules/footer

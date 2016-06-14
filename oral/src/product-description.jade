@@ -1,0 +1,29 @@
+extends _layouts/base
+
+block title
+  title 行业交流
+
+block content
+  include _modules/head-small
+
+  .pd-content
+    - for(var i = 0; i< 2; i++){
+      .pd-block
+        .pd-block-title
+          span 类型
+          .pd-block-title-btn 按钮
+        .pd-block-eachs
+          - for(var k = 0; k< 4; k++){
+            .pd-block-each
+              .pd-detail-img
+              .pd-detail-text
+                h4
+                h5
+                p
+              .btn-more 按钮
+          - }
+          .clear-fix
+    - }
+    .clear-fix
+
+  include _modules/footer

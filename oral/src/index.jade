@@ -1,0 +1,43 @@
+extends _layouts/base
+
+
+block title
+  title 首页
+
+block content
+  include _modules/head
+  .index-content
+    .index-content-three
+      .each-block
+        .test-t.black 内容一
+      .each-block
+        .test-t.black 内容二
+      .each-block
+        .test-t.black 内容三
+      .clear-fix
+    .index-about
+      .test-t 关于我们
+      .index-about-btn-more 更多
+    .index-four
+      .each-block 
+        .test-t.black 图片一
+      .each-block 
+        .test-t.black 图片二
+      .each-block 
+        .test-t.black 图片三
+      .each-block 
+        .test-t.black 图片四
+    .index-oral-advice 口腔咨询
+    .index-six
+      .each-block 1
+      .each-block 1
+      .each-block 1
+      .each-block 1
+      .each-block 1
+      .each-block 1
+      .clear-fix
+    .index-more
+      .index-about-btn-more 更多
+  .index-links
+    .test-t.black 友情链接
+  include _modules/footer

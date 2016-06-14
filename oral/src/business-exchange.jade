@@ -1,0 +1,21 @@
+extends _layouts/base
+
+block title
+  title 行业交流
+
+block content
+  include _modules/head-small
+
+  .exchange-content
+    - for(var i = 0; i< 4; i++){
+      .exchange-each
+        - for(var k = 0; k< 6; k++){
+            .exchange-each-item
+              .exchange-each-item-icon
+              span 转载自转载自转载自重中之重重中之重
+              .exchange-each-item-time 2015-1-12
+        - }
+    - }
+    .clear-fix
+
+  include _modules/footer

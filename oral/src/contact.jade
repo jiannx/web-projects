@@ -1,0 +1,25 @@
+extends _layouts/base
+
+block title
+  title 联系我们
+
+block content
+  include _modules/head-small
+
+  .contact
+    .contact-content
+      .contact-content-name 留言板
+      form
+        .form-group
+          label(for='name') 姓名
+          input#name.form-control(type='text' placeholder='姓名')
+        .form-group
+          label(for='email') 邮箱
+          input#email.form-control(type='email' placeholder='邮箱')
+        .form-group
+          label(for='content') 留言
+          textarea#content.form-control(row='3')
+        button.btn.btn-default(type='submit') 提交
+      .contact-content-map
+
+  include _modules/footer

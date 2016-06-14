@@ -1,0 +1,19 @@
+{
+  "name": "oral",
+  "description": "",
+  "main": "",
+  "authors": [
+    "milolu <765232099@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/milolu/projects",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
