@@ -1,0 +1,26 @@
+{
+  "name": "js-package",
+  "version": "1.0.0",
+  "description": "基于require形式浏览器端的js打包（js打包）",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "silencelu",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-uglify": "^0.3.1",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "underscore": "^1.8.3"
+  }
+}
