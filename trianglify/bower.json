@@ -1,0 +1,21 @@
+{
+  "name": "js-package",
+  "description": "浏览器端的一些依赖库，jq....",
+  "main": "main.js",
+  "authors": [
+    "milolu <765232099@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/milolu/projects",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "jquery-easing": "*"
+  }
+}

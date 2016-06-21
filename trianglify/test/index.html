@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js package test</title>
+    <link rel="stylesheet" href="../dist/app.css" />
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../dist/app.min.js"></script>
+</head>
+
+<body>
+
+<!--该div使用position:fix来模拟惯性滚动 存在一定的局限性，请注意使用：大部分情况下，请将所以dom都放在.body-parallax内部-->
+<div class="body-parallax" id="box">
+    <div style="width: 1000px; margin: auto;">
+        <div class="img-box" id="test1">
+            <div style="position: absolute"></div>
+            <img src="pic1.png" alt=""/>
+        </div>
+        <div class="img-box" id="test2" style="width: 400px; height: 400px">
+            <img src="pic1.png" alt=""/>
+        </div>
+        <div class="img-box" id="test3">
+            <img src="pic1.png" alt=""/>
+        </div>
+        <div class="img-box" id="test4">
+            <img src="pic1.png" alt=""/>
+        </div>
+        <div class="img-box" id="test5" style="width: 500px; height: 700px">
+            <img src="pic1.png" alt=""/>
+        </div>
+    </div>
+</div>
+
+<script>
+    //请使用 window.onload进行调用
+    window.onload = function () {
+        //暂不支持class选择器形式
+        // $('.img-box').imgParallax(); error
+        $('#test1').imgParallax();
+        $('#test2').imgParallax();
+        $('#test3').imgParallax();
+        $('#test4').imgParallax();
+        $('#test5').imgParallax();
+
+        //添加全局的惯性滚动
+        //options = {
+        //  animateTime : 3000,     //滚动执行的时间
+        //  fixTop : 0              //相对于顶部的偏移量
+        //}
+        $('#box').bodyParallax();
+    };
+</script>
+
+</body>
+
+</html>
