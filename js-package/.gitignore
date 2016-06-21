@@ -1,8 +1,0 @@
-node_modules
-bower_components
-.sass-cache
-*.log
-build
-tmp
-.grunt
-.DS_Store
