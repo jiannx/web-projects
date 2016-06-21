@@ -18,9 +18,6 @@ var outJs = 'app.min.js';
 
 
 var bundler = browserify('./src/' + inJs, {
-  standalone: 'Pattern',
-  cache: {},
-  packageCache: {},
   fullPaths: true
 });
 bundler.exclude('crypto');

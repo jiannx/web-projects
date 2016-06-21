@@ -1,23 +1,7 @@
 @charset "utf-8";
+
 @import "bourbon";
 @import "normalize";
-.img-box {
-    width: 200px;
-    height: 300px;
-    border: 1px solid sandybrown;
-    margin: 100px 0;
-    /*以下父div必备样式  position可以relative或者absolute*/
-    position: relative;
-    overflow: hidden;
-}
 
-.img-box img {
-    display: none;
-}
-
-.body-parallax {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: slategray;
+body{
 }
