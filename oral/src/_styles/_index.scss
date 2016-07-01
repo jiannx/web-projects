@@ -54,15 +54,10 @@ div{
     z-index: 10;
     .nav-logo-icon{
       float: left;
-      margin-top: 25px;
-      color: #838383;
-      .big{
-        height: 36px;
-        line-height: 36px;
-        font-size: 34px;
-      }
-      .small{
-        font-size: 16px;
+      height: 110px;
+      padding: 10px 0;
+      img{
+        height: 100%
       }
     }
     .nav-logo-search{
@@ -70,7 +65,7 @@ div{
       width: 290px;
       height: 36px;
       color: #9D9D9D;
-      border: 2px solid #A9A9A9;
+      border: 2px solid #6AA9B2;
       padding: 0 0 0 20px;
       float: right;
       @include BorderRadius(18px);
@@ -82,13 +77,14 @@ div{
         height: 32px;
       }
       .search-icon{
-        height: 22px;
+        height: 20px;
         width: 40px;
-        margin-top: 5px;
+        margin-top: 6px;
         padding-left: 10px;
+        line-height: 20px;
         float: right;
-        color: #a4a4a4;
-        border-left: 1px solid #cccccc;
+        color: #6AA9B2;
+        border-left: 1px solid #6AA9B2;
       }
     }
   }
@@ -108,7 +104,7 @@ div{
       position: absolute;
       left: 0;
       top: 0;
-      background-color: $c-gary;
+      background-color: #3D8F9B;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -123,8 +119,13 @@ div{
         font-weight: bolder;
         cursor: pointer;
         a{
+          display: block;
+          width: 100%;
+          height: 100%;
           color: #e1e1e1;
+          text-decoration: none;
           &:hover{
+            background-color: #4FB9C7;
             color: lighten(#e1e1e1, 5%);
           }
         }
@@ -156,23 +157,23 @@ div{
 
 
 //首页
-.index-nav{
-  width: 100%;
-  height: 630px;
-  background-color: $c-light-gary;
-  .index-nav-block{
-    width: $min-width;
-    margin: auto;
-    z-index: 10;
-  }
-  img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-}
+// .index-nav{
+//   width: 100%;
+//   height: 630px;
+//   background-color: $c-light-gary;
+//   .index-nav-block{
+//     width: $min-width;
+//     margin: auto;
+//     z-index: 10;
+//   }
+//   img{
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//   }
+// }
 
 //导航以下内容
 .index-content{
@@ -181,16 +182,22 @@ div{
   //横向三块
   .index-content-three{
     width: 100%;
-    height: 370px;
-    padding-top: 70px;
+    padding: 80px 0;
     .each-block{
       width: 308px;
-      height: 245px;
-      background-color: $c-light-gary;
+      // height: 245px;
+      // background-color: $c-light-gary;
       float: left;
       margin-right: 38px;
       &:nth-child(3) {
         margin-right: 0;
+      }
+      .title{
+        font-weight: 600;
+        padding: 5px 0;
+      }
+      .content{
+
       }
     }
   }
@@ -200,6 +207,12 @@ div{
     height: 365px;
     line-height: 365px;
     background-color: $c-gary;
+    img.bg{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
     .index-about-btn-more{
       width: 145px;
       height: 45px;
@@ -208,9 +221,9 @@ div{
       color: #E7E7E7;
       font-size: 18px;
       font-weight: bolder;
-      background-color: #535353;
+      background-color: #F8C301;
       position: absolute;
-      left: 12px;
+      left: 0px;
       bottom: 30px;
       z-index: 10;
     }
@@ -238,13 +251,24 @@ div{
   .index-oral-advice{
     width: 100%;
     height: 134px;
-    padding-right: 40px;
-    line-height: 134px;
     background-color: $c-dark-gary;
     color: #e5e5e5;
     font-size: 30px;
-    font-weight: bolder;
-    text-align: right;
+    img.bg{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .title-right{
+      float: right;
+      font-weight: bolder;
+      line-height: 134px;
+    }
+    .title-left{
+      margin-top: 20px;
+      float: left;
+    }
   }
   //六块文本区域
   .index-six{
@@ -256,6 +280,8 @@ div{
       margin-top: 10px;
       margin-right: 11px;
       background-color: $c-gary;
+      border: 2px solid #D1E2C0;
+      padding: 20px;
       &:nth-child(3n){
         margin-right: 0;
       }

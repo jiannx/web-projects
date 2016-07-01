@@ -8,14 +8,14 @@ block content
   include _modules/head
   .index-content
     .index-content-three
+      - for(var i = 0; i< 3; i++){
       .each-block
-        .test-t.black 内容一
-      .each-block
-        .test-t.black 内容二
-      .each-block
-        .test-t.black 内容三
+        .title 东软医疗推出新产品
+        .content   那一年，腾讯刚上市，与现在相比，算不上是一家很大的公司。费岸记得，他面试的时候，腾讯只有员工1600人。“我最初在腾讯研发部门工作，做一些有用户但是不赚钱的项目，如邮箱、下载软件、视频软件等工具类产品，虽然不盈利，但累积用户口碑。”
+      - }
       .clear-fix
     .index-about
+      img.bg(src="images/back-1.png")
       .test-t 关于我们
       .index-about-btn-more 更多
     .index-four
@@ -27,14 +27,14 @@ block content
         .test-t.black 图片三
       .each-block 
         .test-t.black 图片四
-    .index-oral-advice 口腔咨询
+    .index-oral-advice 
+      img.bg(src="images/back-3.png")
+      .title-left ORAL<br/>INFORMATION
+      .title-right 口腔咨询
     .index-six
-      .each-block 1
-      .each-block 1
-      .each-block 1
-      .each-block 1
-      .each-block 1
-      .each-block 1
+      - for(var i = 0; i< 6; i++){
+        .each-block 1
+      - }
       .clear-fix
     .index-more
       .index-about-btn-more 更多
