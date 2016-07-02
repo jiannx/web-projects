@@ -10,16 +10,31 @@ block content
     .contact-content
       .contact-content-name 留言板
       form
-        .form-group
-          label(for='name') 姓名
-          input#name.form-control(type='text' placeholder='姓名')
-        .form-group
-          label(for='email') 邮箱
-          input#email.form-control(type='email' placeholder='邮箱')
-        .form-group
-          label(for='content') 留言
-          textarea#content.form-control(row='3')
-        button.btn.btn-default(type='submit') 提交
+        .contact-input
+          .title 
+            label(for='name') 姓名:
+          input#name(type='text' placeholder='姓名')
+        .contact-input
+          .title 
+            label(for='email') 邮箱:
+          input#email(type='text' placeholder='邮箱')
+        .contact-input
+          .title
+            label(for='content') 留言
+          textarea#content(row='3')
+        .contact-btn-submit 提交
       .contact-content-map
+        img(src="images/map.png")
+
+    .contact-address
+      .contact-address-each
+        .title 联系地址
+        .img
+        .address 浙江省嘉兴市南湖区
+      .contact-address-each
+        .title 联系地址
+        .img
+        .address 浙江省嘉兴市南湖区
+      .clear-fix
 
   include _modules/footer

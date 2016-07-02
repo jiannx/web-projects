@@ -7,13 +7,13 @@
   .advice-each{
     width: 490px;
     height: 290px;
-    background-color: #D6D6D6;
     float: left;
     margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 10px 10px 30px 200px;
-
+    margin-bottom: 50px;
+    padding: 20px 20px 40px 210px;
+    border: 1px solid #3E929D;
     overflow: hidden;
+    color: #777777;
     &:nth-child(2n){
       margin-right: 0;
     }
@@ -24,15 +24,25 @@
       left: 0;
       top: 0;
       background-color: #A4A4A4;
+      img{
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+    .title{
+      font-weight: 600;
+      color: #040404;
+      font-size: 18px;
+      padding-bottom: 5px;
     }
     p{
-      max-height: 160px;
+      max-height: 195px;
       overflow: hidden;
     }
     .advice-each-time{
       position: absolute;
-      right: 10px;
-      bottom: 5px;
+      right: 20px;
+      bottom: 20px;
       font-size: 12px;
     }
   }

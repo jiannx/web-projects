@@ -1,161 +1,167 @@
 @charset "utf-8";
-
-
-$min-width : 1000px;
+$min-width: 1000px;
 $c-gary: #999999;
 $c-light-gary: #e2e2e2;
 $c-dark-gary: #6b6b6b;
-
-
 //以下每个页面公共元素-----------------------------------------------------
-body{
-  color: $c-dark-gary;
-}
-div{
-  position: relative;
-}
-//测试时文本显示，可删除
-.test-t{
-  width: 200px;
-  height: 50px;
-  color: #ffffff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -100px;
-  margin-top: -25px;
-  line-height: 50px;
-  text-align: center;
-  font-size: 24px;
-  &.black{
+body {
     color: $c-dark-gary;
-  }
+    background-color: #F2F2F2
+}
+
+div {
+    position: relative;
+}
+
+//测试时文本显示，可删除
+.test-t {
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -25px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    &.black {
+        color: $c-dark-gary;
+    }
 }
 
 //导航菜单及中间大图
-.nav{
-  width: 100%;
-  height: 630px;
-  background-color: $c-light-gary;
-  //小版导航
-  &.nav-small{
-    height: 450px;
-    overflow: hidden;
-    //中间图片调整，否则会被切割掉
-//    .nav-menu{
-//      height: 340px;
-//    }
-  }
-  //顶部logo及搜索
-  .nav-logo{
-    width: $min-width;
-    height: 110px;
-    margin: auto;
-    z-index: 10;
-    .nav-logo-icon{
-      float: left;
-      height: 110px;
-      padding: 10px 0;
-      img{
-        height: 100%
-      }
-    }
-    .nav-logo-search{
-      margin-top: 35px;
-      width: 290px;
-      height: 36px;
-      color: #9D9D9D;
-      border: 2px solid #6AA9B2;
-      padding: 0 0 0 20px;
-      float: right;
-      @include BorderRadius(18px);
-      input{
-        background: none;
-        border: none;
-        outline: none;
-        width: 200px;
-        height: 32px;
-      }
-      .search-icon{
-        height: 20px;
-        width: 40px;
-        margin-top: 6px;
-        padding-left: 10px;
-        line-height: 20px;
-        float: right;
-        color: #6AA9B2;
-        border-left: 1px solid #6AA9B2;
-      }
-    }
-  }
-  //导航菜单
-  .nav-menu{
-    width: $min-width;
-    height: 535px;
-    padding-top: 45px;
-    margin: auto;
-    background-color: $c-dark-gary;
-    position: relative;
-    overflow: hidden;
-    z-index: 10;
-    ul.nav-menu-row{
-      width: 100%;
-      height: 45px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-color: #3D8F9B;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      z-index: 10;
-      li.nav-menu-item{
-        width: 116px;
-        height: 45px;
-        float: left;
-        text-align: center;
-        line-height: 45px;
-        color: #e1e1e1;
-        font-weight: bolder;
-        cursor: pointer;
-        a{
-          display: block;
-          width: 100%;
-          height: 100%;
-          color: #e1e1e1;
-          text-decoration: none;
-          &:hover{
-            background-color: #4FB9C7;
-            color: lighten(#e1e1e1, 5%);
-          }
-        }
-      }
-    }
-    img{
-      width: 100%;
-      height: 100%;
-    }
-  }
-  //大背景图
-  img.bg{
+.nav {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+    height: 630px;
+    background-color: $c-light-gary;
+    //小版导航
+    &.nav-small {
+        height: 450px;
+        overflow: hidden;
+        //中间图片调整，否则会被切割掉
+        //    .nav-menu{
+        //      height: 340px;
+        //    }
+    }
+    //顶部logo及搜索
+    .nav-logo {
+        width: $min-width;
+        height: 110px;
+        margin: auto;
+        z-index: 10;
+        .nav-logo-icon {
+            float: left;
+            height: 110px;
+            padding: 10px 0;
+            img {
+                height: 100%
+            }
+        }
+        .nav-logo-search {
+            margin-top: 35px;
+            width: 290px;
+            height: 36px;
+            color: #9D9D9D;
+            border: 2px solid #6AA9B2;
+            padding: 0 0 0 20px;
+            float: right;
+            @include BorderRadius(18px);
+            input {
+                background: none;
+                border: none;
+                outline: none;
+                width: 200px;
+                height: 32px;
+                color: #6AA9B2;
+            }
+            input::-webkit-input-placeholder{
+                color: #6AA9B2;
+            }
+            input::-moz-placeholder{
+                color: #6AA9B2;
+            }
+            input:-ms-input-placeholder{
+                color: #6AA9B2;
+            }
+            .search-icon {
+                height: 20px;
+                width: 40px;
+                margin-top: 6px;
+                padding-left: 10px;
+                line-height: 20px;
+                float: right;
+                color: #6AA9B2;
+                border-left: 1px solid #6AA9B2;
+            }
+        }
+    }
+    //导航菜单
+    .nav-menu {
+        width: $min-width;
+        height: 535px;
+        padding-top: 45px;
+        margin: auto;
+        background-color: $c-dark-gary;
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
+        ul.nav-menu-row {
+            width: 100%;
+            height: 45px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #3D8F9B;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            z-index: 10;
+            li.nav-menu-item {
+                width: 116px;
+                height: 45px;
+                float: left;
+                text-align: center;
+                line-height: 45px;
+                color: #e1e1e1;
+                font-weight: bolder;
+                cursor: pointer;
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    color: #e1e1e1;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: #4FB9C7;
+                        color: lighten(#e1e1e1, 5%);
+                    }
+                }
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+    //大背景图
+    img.bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
+
 //底部
-.footer{
-  width: 100%;
-  height: 218px;
-  background-color: $c-dark-gary;
+.footer {
+    width: 100%;
+    height: 218px;
+    background-color: #3D8F9B;
 }
 
 //公共元素 end-----------------------------------------------------
-
-
-
 //首页
 // .index-nav{
 //   width: 100%;
@@ -174,140 +180,141 @@ div{
 //     top: 0;
 //   }
 // }
-
 //导航以下内容
-.index-content{
-  width: $min-width;
-  margin: auto;
-  //横向三块
-  .index-content-three{
-    width: 100%;
-    padding: 80px 0;
-    .each-block{
-      width: 308px;
-      // height: 245px;
-      // background-color: $c-light-gary;
-      float: left;
-      margin-right: 38px;
-      &:nth-child(3) {
-        margin-right: 0;
-      }
-      .title{
-        font-weight: 600;
-        padding: 5px 0;
-      }
-      .content{
-
-      }
-    }
-  }
-  //关于我们
-  .index-about{
-    width: 100%;
-    height: 365px;
-    line-height: 365px;
-    background-color: $c-gary;
-    img.bg{
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-    .index-about-btn-more{
-      width: 145px;
-      height: 45px;
-      line-height: 45px;
-      text-align: center;
-      color: #E7E7E7;
-      font-size: 18px;
-      font-weight: bolder;
-      background-color: #F8C301;
-      position: absolute;
-      left: 0px;
-      bottom: 30px;
-      z-index: 10;
-    }
-  }
-  //横向四块图片
-  .index-four{
-    width: 100%;
-    height: 275px;
-    .each-block{
-      width: 25%;
-      height: 100%;
-      float: left;
-      background-color: $c-light-gary;
-      overflow: hidden;
-      img{
+.index-content {
+    width: $min-width;
+    margin: auto;
+    //横向三块
+    .index-content-three {
         width: 100%;
-        height: 100%;
-      }
-      &:nth-child(2n){
-        background-color: darken($c-light-gary, 5%);
-      }
+        padding: 80px 0;
+        .each-block {
+            width: 308px;
+            // height: 245px;
+            // background-color: $c-light-gary;
+            float: left;
+            margin-right: 38px;
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+            .title {
+                font-weight: 600;
+                padding: 5px 0;
+            }
+            .content {}
+        }
     }
-  }
-  //口腔咨询标题
-  .index-oral-advice{
-    width: 100%;
-    height: 134px;
-    background-color: $c-dark-gary;
-    color: #e5e5e5;
-    font-size: 30px;
-    img.bg{
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
+    //关于我们
+    .index-about {
+        width: 100%;
+        height: 360px;
+        line-height: 365px;
+        // background-color: $c-gary;
+        overflow: hidden;
+        img.bg {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .index-about-btn-more {
+            width: 145px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: #E7E7E7;
+            font-size: 18px;
+            font-weight: bolder;
+            background-color: #F8C301;
+            position: absolute;
+            left: 0px;
+            bottom: 30px;
+            z-index: 10;
+        }
     }
-    .title-right{
-      float: right;
-      font-weight: bolder;
-      line-height: 134px;
+    //横向四块图片
+    .index-four {
+        width: 100%;
+        height: 275px;
+        .each-block {
+            width: 25%;
+            height: 100%;
+            float: left;
+            background-color: $c-light-gary;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+            &:nth-child(2n) {
+                background-color: darken($c-light-gary, 5%);
+            }
+        }
     }
-    .title-left{
-      margin-top: 20px;
-      float: left;
+    //口腔咨询标题
+    .index-oral-advice {
+        width: 100%;
+        height: 134px;
+        background-color: $c-dark-gary;
+        color: #e5e5e5;
+        font-size: 30px;
+        img.bg {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .title-right {
+            float: right;
+            font-weight: bolder;
+            line-height: 134px;
+        }
+        .title-left {
+            margin-top: 20px;
+            float: left;
+        }
     }
-  }
-  //六块文本区域
-  .index-six{
-    width: 100%;
-    .each-block{
-      width: 326px;
-      height: 275px;
-      float: left;
-      margin-top: 10px;
-      margin-right: 11px;
-      background-color: $c-gary;
-      border: 2px solid #D1E2C0;
-      padding: 20px;
-      &:nth-child(3n){
-        margin-right: 0;
-      }
+    //六块文本区域
+    .index-six {
+        width: 100%;
+        .each-block {
+            width: 326px;
+            height: 275px;
+            float: left;
+            margin-top: 10px;
+            margin-right: 11px;
+            border: 2px solid #D1E2C0;
+            padding: 20px;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+            &:hover {
+                background-color: #91C06F;
+                color: white;
+            }
+        }
     }
-  }
-  .index-more{
-    width: 100%;
-    height: 100px;
-    padding-top: 22px;
-    .index-about-btn-more{
-      width: 145px;
-      height: 45px;
-      margin: auto;
-      line-height: 45px;
-      text-align: center;
-      color: #E7E7E7;
-      font-size: 18px;
-      font-weight: bolder;
-      background-color: #535353;
-      z-index: 10;
+    .index-more {
+        width: 100%;
+        height: 100px;
+        padding-top: 22px;
+        .index-about-btn-more {
+            width: 145px;
+            height: 45px;
+            margin: auto;
+            line-height: 45px;
+            text-align: center;
+            color: #E7E7E7;
+            font-size: 18px;
+            font-weight: bolder;
+            background-color: #DE5656;
+            z-index: 10;
+        }
     }
-  }
 }
+
 //友情链接
-.index-links{
-  width: 100%;
-  height: 162px;
-  background-color: $c-light-gary;
+.index-links {
+    width: 100%;
+    height: 162px;
+    background-color: $c-light-gary;
 }

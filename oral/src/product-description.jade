@@ -1,7 +1,7 @@
 extends _layouts/base
 
 block title
-  title 行业交流
+  title 产品介绍
 
 block content
   include _modules/head-small
@@ -16,10 +16,11 @@ block content
           - for(var k = 0; k< 4; k++){
             .pd-block-each
               .pd-detail-img
+                img(src="images/exchange-#{k+1}.jpg")
               .pd-detail-text
-                h4
-                h5
-                p
+                h4 T450s
+                h5 tt
+                p ds
               .btn-more 按钮
           - }
           .clear-fix

@@ -1,44 +1,58 @@
 @charset "utf-8";
-
-.exchange-content{
+.exchange-content {
   width: $min-width;
   margin: auto;
   padding: 45px 0 0 0;
-  .exchange-each{
-    width: 470px;
-    margin-right: 60px;
+  .exchange-each {
+    width: 310px;
+    height: 400px;
+    margin-right: 35px;
     margin-bottom: 40px;
+    padding-top: 240px;
     float: left;
-    &:nth-child(2n){
+    color: #686868;
+    overflow: hidden;
+    &:nth-child(3n) {
       margin-right: 0;
     }
-    .exchange-each-item{
+    .each-img-box {
       width: 100%;
-      height: 30px;
-      line-height: 30px;
-      padding: 0 5px 0 40px;
-      margin-bottom: 16px;
-      .exchange-each-item-icon{
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #C9C9C9;
+      height: 240px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      img {
+        width: 100%;
       }
-      .exchange-each-item-time{
-        float: right;
-        text-align: right;
-      }
+    }
+    .each-day{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      text-align: center;
+      line-height: 18px;
+      padding: 2px 0;
+      color: white;
+      background-color: #3D8F9B;
+    }
+    .title {
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+      padding: 10px 0;
+      color: #262626;
     }
   }
 }
-.exchange-btn-next{
+
+.exchange-btn-next {
   width: 200px;
   height: 40px;
   margin: 0 auto 50px auto;
   line-height: 40px;
   text-align: center;
   color: #EAEAEA;
-  background-color: #999999;
+  background-color: #DE5656;
 }

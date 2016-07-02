@@ -7,25 +7,28 @@
   width: $min-width;
   margin: auto;
   padding-top: 35px;
+  padding-bottom: 40px;
   &:nth-last-child(1){
     padding-bottom: 24px;
   }
   .pd-block-title{
     width: 100%;
-    height: 36px;
-    line-height: 36px;
+    height: 50px;
     color: $c-dark-gary;
     font-size: 22px;
     font-weight: bolder;
+    span{
+      border-bottom: 4px solid #52B9C8;
+    }
     .pd-block-title-btn{
       float: right;
       width: 80px;
       height: 32px;
       line-height: 32px;
       margin-top: 2px;
-      background-color: $c-dark-gary;
+      background-color: #F8C301;
       text-align: center;
-      color: #2E2E2E;
+      color: white;
     }
   }
   .pd-block-eachs{
@@ -33,10 +36,10 @@
       width: 235px;
       height: 290px;
       float: left;
-      padding: 175px 10px 10px 10px;
+      padding: 170px 10px 10px 10px;
       margin-right: 20px;
       margin-top: 10px;
-      background-color: #C9C9C9;
+      border: 1px solid #4FB9C7;
       &:nth-child(4n){
         margin-right: 0;
       }
@@ -47,6 +50,10 @@
         position: absolute;
         left: 10px;
         top: 10px;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
       }
       .pd-detail-text{
         height: 70px;
@@ -69,15 +76,15 @@
       .btn-more{
         width: 70px;
         height: 30px;
-        background-color: $c-dark-gary;
+        background-color: #4FB9C7;
         position: absolute;
         left: 10px;
         bottom: 10px;
         text-align: center;
         line-height: 30px;
-        color: #CDCDCD;
+        color: white;
+        font-size: 12px;
       }
     }
   }
-
 }

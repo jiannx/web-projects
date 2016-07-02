@@ -1,111 +1,180 @@
 @charset "utf-8";
-
-.about-content{
+.about-content {
   width: 100%;
   background-color: #F2F2F2;
-  .about-time{
+  .about-time {
     width: $min-width;
-    height: 760px;
+    height: 780px;
     margin: auto;
-    &:before{
+    &:before {
       display: block;
       width: 2px;
-      height: 720px;
-      background-color: #D1D1D1;
+      height: 700px;
+      background-color: #3D8F9B;
       position: absolute;
       left: 50%;
-      top: 20px;
+      top: 40px;
       content: '';
     }
-    .about-time-each{
-      text-align: center;
+    .about-time-each {
       position: absolute;
-      width: 100px;
-      .title{
-        font-size: 28px;
+      width: 480px;
+      height: 100px;
+      background-color: #3D8F9B;
+      color: white;
+      .time-box {
+        position: absolute;
+        top: -10px;
+        width: 100px;
+        height: 100px;
+        background-color: #FFAA01;
+        padding-top: 10px;
+        text-align: center;
+        @include BoxShadow(1px, 1px, 5px, #3E3D3D);
+        .title {
+          font-size: 32px;
+        }
       }
-      &.first{
-        left: 350px;
-        top: 30px;
+      &.time-left {
+        padding: 20px 140px 20px 20px;
+        .time-box {
+          right: 10px;
+        }
       }
-      &.second{
-        @extend .first;
-        top: 320px;
+      &.time-right {
+        padding: 20px 20px 20px 140px;
+        .time-box {
+          left: 10px;
+        }
       }
-      &.third{
-        @extend .first;
-        top: 650px;
+      &.first {
+        left: 0px;
+        top: 50px;
       }
-      &.fourth{
-        right: 300px;
-        top: 180px;
+      &.second {
+        right: 0;
+        top: 190px;
       }
-      &.fifth{
-        @extend .fourth;
-        top: 480px;
+      &.third {
+        left: 0;
+        top: 330px;
+      }
+      &.fourth {
+        right: 0;
+        top: 490px;
+      }
+      &.fifth {
+        left: 0;
+        top: 630px;
       }
     }
   }
-
-  .about-us{
+  .about-us {
     width: 100%;
     height: 365px;
     background-color: #C9C9C9;
-    .about-us-content{
+    overflow: hidden;
+    img.about-us-bg {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .about-us-content {
       width: $min-width;
       height: 100%;
       margin: auto;
       padding: 100px 450px 100px 0;
-      .about-us-content-right{
+      color: white;
+      .about-us-content-right {
         width: 360px;
         position: absolute;
         top: 0;
         right: 0;
         text-align: right;
         padding-top: 30px;
-        .title{
+        .title {
+          width: 200px;
           font-size: 30px;
+          float: right;
+          text-align: center;
         }
-        .title-second{
-          font-size: 24px;
-        }
-        .img{
+        .img {
           width: 355px;
           height: 190px;
           background-color: #7D7D7D;
           margin-top: 20px;
+          border: 4px solid white;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
         }
       }
     }
   }
-
-  .about-strength{
+  .about-strength {
     width: $min-width;
     margin: auto;
     padding-bottom: 120px;
-    .about-strength-title{
+    .about-strength-title {
+      width: 400px;
+      margin: auto;
       padding: 90px 0;
       text-align: center;
-      font-size: 30px;
+      font-size: 24px;
+      color: black;
+      .title-big {
+        font-weight: 600;
+        font-size: 36px;
+        &:after {
+          display: block;
+          width: 100px;
+          height: 2px;
+          background-color: black;
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 26px;
+        }
+        &:before{
+          display: block;
+          width: 100px;
+          height: 2px;
+          background-color: black;
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 26px;
+        }
+      }
     }
-    .about-strength-each{
+    .about-strength-each {
       width: 300px;
       height: 400px;
       float: left;
       margin-right: 50px;
       overflow: hidden;
-      &:nth-child(3n){
+      padding-top: 280px;
+      &:nth-child(3n) {
         margin-right: 0;
       }
-      .about-strength-each-img{
+      .about-strength-each-img {
         width: 100%;
         height: 256px;
         background-color: #C9C9C9;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
       }
-      h3{
+      h3 {
         text-align: center;
       }
-      p{
+      p {
         height: 82px;
         overflow: hidden;
         text-overflow: ellipsis;
