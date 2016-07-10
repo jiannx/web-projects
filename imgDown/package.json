@@ -11,8 +11,10 @@
     "debug": "~2.2.0",
     "ejs": "~2.3.3",
     "express": "~4.13.1",
+    "gm": "^1.22.0",
     "morgan": "~1.6.1",
     "querystring": "^0.2.0",
+    "request": "^2.72.0",
     "serve-favicon": "~2.3.0",
     "socket.io": "^1.4.8"
   }
