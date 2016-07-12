@@ -40,8 +40,6 @@ function getBaseHtml(url) {
             html = html + iconv.decode(chunk, "utf8");
         });
         httpres.on('end', function() {
-
-
             //正则获得移动端网页地址
             mobileUrl = html.match(/http\:\/\/m\.kaola\.com\/product\/([0-9]*)\.html/g)[0];
             console.log('移动端url：' + mobileUrl);
@@ -85,12 +83,10 @@ function getMobileUrl(url) {
 
             //解析html获取图片list
             var goodsDetail = html.match(/var\s__goodsDetail\s=\s(.*)/)[0];
-            var lists = goodsDetail.match(/http\:\/\/(\S*)\.jpg/g);
-            // console.log(lists);
+            var lists = goodsDetail.match(/http\:\/\/[^\\]*/g);
 
             srcList = lists;
             downImg(lists);
-
         });
     }).on("error", function(e) {
         console.log(e.message);
@@ -122,14 +118,14 @@ function downImg(list) {
                 imgData += chunk;
             });
 
-            //解析后缀名 TODO
-            //
             res.on("end", function() {
                 fs.writeFile("download/" + id + '/imgs/' + name + '.jpg', imgData, "binary", function(err) {
                     if (err) {
-                        console.log("down fail");
+                        // console.log("down fail");
+                        console.log(src + " fail");
+                        // console.log(err);
                     }
-                    // console.log("down success");
+                    console.log(src + " success");
                     isAllcomplate();
                 });
             });
@@ -139,13 +135,24 @@ function downImg(list) {
         });
         h.end();
     }
+    var lastSrc = '';
     for (var i in list) {
-        down(list[i], i);
+        var t = list[i].match(/http\:\/\/(\.jpg)/g);
+        if (lastSrc == t) {
+            console.log(list[i] + ' 重复图片，不下载');
+            return;
+        } else {
+            lastSrc = t;
+            down(list[i], i);
+            console.log(list[i] + ' starting');
+        }
+
     }
 }
 
 function mergeImg() {
     console.log('开始合并图片....');
+    // return;
     var details = [];
     var add = 0;
     for (var i = 0; i < srcList.length; i++) {
