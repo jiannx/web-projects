@@ -86,13 +86,23 @@ function getMobileUrl(url) {
             var lists = goodsDetail.match(/http\:\/\/[^\\]*/g);
 
             srcList = lists;
-            downImg(lists);
+            removeSame();
+            downImg(srcList);
+
         });
     }).on("error", function(e) {
         console.log(e.message);
     });
 
     httpreq.end();
+}
+
+function removeSame(){
+    var newList = [];
+    for(var i = 1; i < srcList.length; i++){
+        var t = srcList[i].match(/http\:\/\/(\S*)(\.jpg)?/g);
+        console.log(t);
+    }
 }
 
 
@@ -135,18 +145,9 @@ function downImg(list) {
         });
         h.end();
     }
-    var lastSrc = '';
     for (var i in list) {
-        var t = list[i].match(/http\:\/\/(\.jpg)/g);
-        if (lastSrc == t) {
-            console.log(list[i] + ' 重复图片，不下载');
-            return;
-        } else {
-            lastSrc = t;
-            down(list[i], i);
-            console.log(list[i] + ' starting');
-        }
-
+        down(list[i], i);
+        console.log(list[i] + ' starting');
     }
 }
 
