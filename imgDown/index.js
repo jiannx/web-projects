@@ -100,7 +100,7 @@ function getMobileUrl(url) {
 function removeSame(){
     var newList = [];
     for(var i = 1; i < srcList.length; i++){
-        var t = srcList[i].match(/http\:\/\/(\S*)(\.jpg)?/g);
+        var t = srcList[i].match(/http\:\/\/(\S*)(\.jpg?)/g);
         console.log(t);
     }
 }
