@@ -41,7 +41,12 @@ function getBaseHtml(url) {
         });
         httpres.on('end', function() {
             //正则获得移动端网页地址
-            mobileUrl = html.match(/http\:\/\/m\.kaola\.com\/product\/([0-9]*)\.html/g)[0];
+            mobileUrl = html.match(/http\:\/\/m\.kaola\.com\/product\/([0-9]*)\.html/g);
+            if (!mobileUrl) {
+                console.log('输入的url 错误');
+                return;
+            }
+            mobileUrl = mobileUrl[0];
             console.log('移动端url：' + mobileUrl);
 
             id = mobileUrl.match(/(\d+)/g)[0];
@@ -97,12 +102,31 @@ function getMobileUrl(url) {
     httpreq.end();
 }
 
-function removeSame(){
-    var newList = [];
-    for(var i = 1; i < srcList.length; i++){
-        var t = srcList[i].match(/http\:\/\/(\S*)(\.jpg?)/g);
-        console.log(t);
+function removeSame() {
+    if (!srcList || srcList.length == 0)
+        return;
+    var newList = [srcList[0]];
+    var last = srcList[0].match(/http\:\/\/(\S*)(\.jpg)/g);
+    if (!last)
+        last = srcList[0];
+    else
+        last = last[0];
+    // console.log(last);
+    for (var i = 1; i < srcList.length; i++) {
+        var t = srcList[i].match(/http\:\/\/(\S*)(\.jpg)/g);
+        if (!t)
+            t = srcList[i];
+        else
+            t = t[0];
+        if (last != t) {
+            newList.push(srcList[i]);
+        }
+        last = t;
     }
+    // console.log(srcList);
+    // console.log('--------------');
+    srcList = newList;
+    // console.log(srcList);
 }
 
 
