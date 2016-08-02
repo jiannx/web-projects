@@ -1,0 +1,61 @@
+@charset "utf-8";
+//引用
+
+//渐变动画
+//@include transition(0.5s);
+@mixin Transition($time : 0.2s, $color : all, $action : ease-in-out){
+  -webkit-transition: $color $time $action;
+  -moz-transition: $color $time $action;
+  -ms-transition: $color $time $action;
+  -o-transition: $color $time $action;
+  transition: $color $time $action;
+}
+
+//添加阴影
+//@include boxShadow(2px,0px,2px);
+@mixin BoxShadow($Horizontal : 5px, $Vertical : 5px, $BlurRadius : 5px, $Color : #000000){
+  -moz-box-shadow: $Horizontal $Vertical $BlurRadius $Color;
+  -webkit-box-shadow: $Horizontal $Vertical $BlurRadius $Color;
+  box-shadow: $Horizontal $Vertical $BlurRadius $Color;
+}
+
+//添加透明度
+//@include opacity(0.9);
+@mixin Opacity($value){
+  filter:alpha(opacity=$value * 100);
+  -moz-opacity: $value;
+  -khtml-opacity: $value;
+  opacity: $value;
+}
+
+//圆角
+//@include borderRadius(2px);
+@mixin BorderRadius($value){
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+@mixin BorderRadiusEx($lefttop, $righttop, $rightbottom, $leftbottom){
+  border-radius: $lefttop $righttop $rightbottom $leftbottom;
+  -moz-border-radius: $lefttop $righttop $rightbottom $leftbottom;
+  -webkit-border-radius: $lefttop $righttop $rightbottom $leftbottom;
+}
+
+//变形
+//@include transform(rotate(30deg));
+//@include transform(scale(0.738, 1));
+//@include transform(skew(-12deg, 1deg));
+//@include transform(translate(-83px, 0px));
+@mixin Transform($type){
+  transform: $type ;
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -o-transform: $type;
+  -ms-transform: $type;
+}
+//两种颜色，由上而下的渐变
+@mixin GradientTwoColor($color1, $color2){
+  background:-webkit-gradient(linear, 0 0, 0 100%, from($color1), to($color2));
+  background:-moz-linear-gradient(top, $color1,$color2);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=$color1,endColorstr=$color2,grandientType=1);
+}

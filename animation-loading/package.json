@@ -1,0 +1,43 @@
+{
+  "name": "js-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "silencelu",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.1.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^0.3.1",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
+    "node-sass": "^3.7.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "underscore": "^1.8.3"
+  },
+  "config": {
+    "port": "4000",
+    "//": "定义当前打包模式, browserify: require形式打包; concat: js文件合并",
+    "type": "concat",
+    "//": "browserify模式暴露到外部变量名, concat无效",
+    "export": "Test",
+    "//": "browserify模式入门文件, concat无效",
+    "inJs": "app.js",
+    "//": "输出js文件",
+    "outJs": "app.min.js"
+  }
+}
