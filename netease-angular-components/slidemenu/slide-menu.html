@@ -1,0 +1,29 @@
+        <div class="app-menu">
+            <div class="ui-slidemenu" id="slide-menu">
+                <ul>
+                    <li ng-show="auth1.akamai">
+                        <a><i class="fa fa-cloud" aria-hidden="true"></i>&nbsp;&nbsp;新增服务</a>
+                        <ul>
+                            <li ng-show="auth1.akamai"><a ui-sref="akamai" ui-sref-active="sel">海外加速</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-location-arrow" aria-hidden="true"></i>&nbsp;&nbsp;流量调度</a>
+                        <ul>
+                            <li ng-show="auth1.clouddns_domain"><a ui-sref="clouddns.domain" ui-sref-active="sel">域名解析</a></li>
+                            <li ng-show="auth1.clouddns_dispatch"><a ui-sref="clouddns.dispatch" ui-sref-active="sel">流量切换</a></li>
+                        </ul>
+                    </li>
+                    <li ng-show="auth1.auth">
+                        <a><i class="fa fa-key" aria-hidden="true"></i>&nbsp;&nbsp;权限管理</a>
+                        <ul>
+                            <li><a ui-sref="auth.user" ui-sref-active="sel">用户管理</a></li>
+                            <li><a ui-sref="auth.group" ui-sref-active="sel">组管理</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li>
+                        <a ui-sref="test" ui-sref-active="sel"><i class="fa fa-key"></i>&nbsp;&nbsp;测试</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
