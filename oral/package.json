@@ -40,7 +40,7 @@
     "gulp-eslint": "~1.1.1",
     "gulp-sass": "~2.1.1",
     "gulp-newer": "~1.1.0",
-    "js-yaml": "~3.5.2",
+    "js-yaml": "~3.13.1",
     "watchify": "~3.7.0 ",
     "browserify" : "~13.0.1"
   },
